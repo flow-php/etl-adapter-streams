@@ -23,7 +23,7 @@ $localFiles = Stream::local_directory("./nested/directory", "json");
 
 ```
 
-### Flysystem - Azure AWS S3 
+### Flysystem - AWS S3 
 
 Before using Azure AWS S3 stream please install dependencies:
 
