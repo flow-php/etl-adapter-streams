@@ -45,7 +45,7 @@ $s3_client_option = [
     'version' => 'latest',
 ];
 
-$remoteFile = Stream::aws_s3_file('flow-php/dataset.json', $s3_client_option);
+$remoteFile = Stream::aws_s3_file('flow-php', 'dataset.json', $s3_client_option);
 $remoteFiles = Stream::aws_s3_directory('flow-php', 'folder', 'json', $s3_client_option);
 ```
 
@@ -65,7 +65,7 @@ use Flow\ETL\DSL\Stream;
 $azure_blob_connection_string = 'DefaultEndpointsProtocol=https;AccountName=...;AccountKey=...';
 
 
-$remoteFile = Stream::azure_blob_file('flow-php/dataset.json', $azure_blob_connection_string);
+$remoteFile = Stream::azure_blob_file('flow-php', 'dataset.json', $azure_blob_connection_string);
 $remoteFiles = Stream::azure_blob_directory('flow-php', 'folder', 'json', $azure_blob_connection_string);
 
 ```
