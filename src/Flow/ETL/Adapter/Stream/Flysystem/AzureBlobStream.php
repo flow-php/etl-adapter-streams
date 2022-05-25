@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Flow\ETL\Adapter\Stream\Flysystem;
 
-use Aws\S3\S3Client;
-use League\Flysystem\AwsS3V3\AwsS3V3Adapter;
+use League\Flysystem\AzureBlobStorage\AzureBlobStorageAdapter;
 use League\Flysystem\Filesystem;
+use MicrosoftAzure\Storage\Blob\BlobRestProxy;
 
-final class AwsS3Stream extends FlysystemWrapper
+final class AzureBlobStream extends FlysystemWrapper
 {
-    public const PROTOCOL = 'flow-aws-s3';
+    public const PROTOCOL = 'flow-azure-blob';
 
     public static function register() : void
     {
@@ -32,26 +32,24 @@ final class AwsS3Stream extends FlysystemWrapper
             /**
              * @psalm-suppress MixedArgument
              *
-             * @var array{credentials: array{key: string, secret: string}, region: string, version: string} $clientOptions
+             * @var array{connection-string: string} $clientOptions
              */
             $clientOptions = \array_merge(
-                [
-                    'credentials' => [
-                        'key'    => '',
-                        'secret' => '',
-                    ],
-                    'region' => '',
-                    'version' => 'latest',
-                ],
+                ['connection-string' => ''],
                 $contextOptions[self::PROTOCOL]['client'] ?? []
             );
 
             /**
              * @psalm-suppress PossiblyNullArrayAccess
              * @psalm-suppress PossiblyNullArgument
-             * @phpstan-ignore-next-line
              */
-            $this->filesystem = (new Filesystem(new AwsS3V3Adapter(new S3Client($clientOptions), $this->url['host'])));
+            $this->filesystem = (new Filesystem(
+                new AzureBlobStorageAdapter(
+                    BlobRestProxy::createBlobService($clientOptions['connection-string']),
+                    /** @phpstan-ignore-next-line */
+                    $this->url['host']
+                )
+            ));
         }
 
         return $this->filesystem;

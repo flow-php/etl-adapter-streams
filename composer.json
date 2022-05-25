@@ -1,21 +1,20 @@
 {
-    "name": "flow-php/etl-adapter-flysystem",
+    "name": "flow-php/etl-adapter-streams",
     "type": "library",
-    "description": "PHP ETL - Adapter - Flysystem",
+    "description": "PHP ETL - Adapter - Streams",
     "keywords": ["etl", "extract", "transform", "load", "flysystem", "adapter"],
     "prefer-stable": true,
     "minimum-stability": "dev",
     "require": {
         "php": "~8.1",
         "ext-json": "*",
-        "flow-php/etl": "^1.0@dev",
-        "league/flysystem": "^3.0"
+        "flow-php/etl": "^1.0@dev"
     },
-    "repositories": [{
-        "type": "path",
-        "url": "../etl",
-        "symlink": true
-    }],
+    "require-dev": {
+        "league/flysystem": "^3.0",
+        "league/flysystem-aws-s3-v3": "^3.0",
+        "league/flysystem-azure-blob-storage": "^3.0"
+    },
     "config": {
         "optimize-autoloader": true,
         "sort-packages": true
@@ -54,8 +53,5 @@
         "post-update-cmd": [
             "@tools:install"
         ]
-    },
-    "require-dev": {
-        "league/flysystem-aws-s3-v3": "^3.0"
     }
 }
