@@ -55,7 +55,7 @@ Before using Azure AWS S3 stream please install dependencies:
 
 ```
 composer require league/flysystem
-composer require flysystem-azure-blob-storage
+composer require league/flysystem-azure-blob-storage
 ```
 
 ```php
