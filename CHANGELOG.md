@@ -1,6 +1,7 @@
-## [Unreleased] - 2022-06-03
+## [Unreleased] - 2022-06-07
 
 ### Changed
+- [922a64](https://github.com/flow-php/etl-adapter-streams/commit/922a640b8333e3fb91a767ad2ff6da99ea0df679) - **Create LICENSE** - [@norberttech](https://github.com/norberttech)
 - [361b9a](https://github.com/flow-php/etl-adapter-streams/commit/361b9a90e49efbfbdd1140ecf279dcb13efab167) - **repository name from etl-adapter-flysystem to etl-adapter-streams** - [@norberttech](https://github.com/norberttech)
 - [cb38d3](https://github.com/flow-php/etl-adapter-streams/commit/cb38d384e8852b3ad6a036e03c84374253ee99ea) - **Initial commit** - [@norberttech](https://github.com/norberttech)
 
