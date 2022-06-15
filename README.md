@@ -28,7 +28,6 @@ $localFiles = Stream::local_directory("./nested/directory", "json");
 Before using Azure AWS S3 stream please install dependencies:
 
 ```
-composer require league/flysystem
 composer require league/flysystem-aws-s3-v3
 ```
 
@@ -54,7 +53,6 @@ $remoteFiles = Stream::aws_s3_directory('flow-php', 'folder', 'json', $s3_client
 Before using Azure AWS S3 stream please install dependencies:
 
 ```
-composer require league/flysystem
 composer require league/flysystem-azure-blob-storage
 ```
 
