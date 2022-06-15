@@ -8,10 +8,10 @@
     "require": {
         "php": "~8.1",
         "ext-json": "*",
-        "flow-php/etl": "^1.0@dev"
+        "flow-php/etl": "^1.0@dev",
+        "league/flysystem": "^3.0"
     },
     "require-dev": {
-        "league/flysystem": "^3.0",
         "league/flysystem-aws-s3-v3": "^3.0",
         "league/flysystem-azure-blob-storage": "^3.0"
     },
