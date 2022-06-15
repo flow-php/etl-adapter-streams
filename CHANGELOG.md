@@ -7,6 +7,7 @@
 - [cb38d3](https://github.com/flow-php/etl-adapter-streams/commit/cb38d384e8852b3ad6a036e03c84374253ee99ea) - **Initial commit** - [@norberttech](https://github.com/norberttech)
 
 ### Updated
+- [63bad5](https://github.com/flow-php/etl-adapter-streams/commit/63bad59e9bf9470ea15bd6bb39214174f0a9b610) - **README** - [@norberttech](https://github.com/norberttech)
 - [801531](https://github.com/flow-php/etl-adapter-streams/commit/801531186fc8ab465c7b0731d2909ee38df2cf61) - **README.md** - [@norberttech](https://github.com/norberttech)
 - [6cd2b8](https://github.com/flow-php/etl-adapter-streams/commit/6cd2b8a6800594559aaf214ececdcba9cf1546f3) - **README.md** - [@norberttech](https://github.com/norberttech)
 - [2cd940](https://github.com/flow-php/etl-adapter-streams/commit/2cd9402b0d8d11a27c501bbf67e4d63f75d78e02) - **README.md** - [@norberttech](https://github.com/norberttech)
